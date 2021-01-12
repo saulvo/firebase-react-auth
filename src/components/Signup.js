@@ -1,6 +1,6 @@
-import React, {useRef, useState} from "react";
-import { Card, Form, Button, Alert } from "react-bootstrap";
-import { Link, useHistory } from "react-router-dom";
+import React, { useRef, useState } from "react";
+import { Alert, Button, Card, Form } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import { useAuth } from "../contexts/AuthContext";
 function Signup(props) {
 
@@ -9,7 +9,6 @@ function Signup(props) {
   const passwordConfirmRef = useRef();
   const [error, setError] = useState('');
 	const [loading, setLoading] = useState(false);
-	const history = useHistory();
 
   const {signup} = useAuth();
   const handleSubmit = async e => {
